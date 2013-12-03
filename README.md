@@ -1,0 +1,4 @@
+SubclassJS
+==========
+
+Simple JavaScript Inheritance
