@@ -1,6 +1,8 @@
 /* Simple JavaScript Inheritance
  * from the book: "Secrets of the JavaScript Ninja" http://amzn.to/17f0RS8
- * By John Resig http://ejohn.org/blog/simple-javascript-inheritance/
+ * By John Resig
+ * http://ejohn.org/blog/simple-javascript-inheritance/
+ * http://ejohn.org/blog/javascript-getters-and-setters/
  * MIT Licensed.
  */
 // Inspired by base2 and Prototype

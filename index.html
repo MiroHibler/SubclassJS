@@ -19,8 +19,13 @@
 				},
 
 				// Ninja will inherit this property
+				set name( newName ) {
+					this._name = newName;
+				},
+
+				// Ninja will inherit this property
 				get name() {
-					return "Ichigo Kurosaki";
+					return this._name;
 				},
 
 				dance: function() {
@@ -45,10 +50,12 @@
 			});
 
 			var person = new Person( true );
+			person.name = "Rukia";
 			assert( person.dance(), person.name + " is dancing." );
 
 			var ninja = new Ninja();
 			assert( ninja.swingSword(), "The sword is swinging." );
+			ninja.name = "Ichigo Kurosaki";
 			assert( !ninja.dance(), ninja.name + " is not dancing." );
 
 			assert( person instanceof Person, "Person is a Person." );
