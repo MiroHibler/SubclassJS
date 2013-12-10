@@ -8,6 +8,8 @@
 
 ## Usage
 
+*__Install [5 min fork](http://5minfork.com/) browser extension to see this example directly on GitHub without even downloading anything!__*
+
 	var Person = Object.subClass({
 
 		init: function( isDancing ) {
@@ -15,8 +17,13 @@
 		},
 
 		// Ninja will inherit this property
+		set name( newName ) {
+			this._name = newName;
+		},
+
+		// Ninja will inherit this property
 		get name() {
-			return "Ichigo Kurosaki";
+			return this._name;
 		},
 
 		dance: function() {
@@ -41,16 +48,17 @@
 	});
 
 	var person = new Person( true );
+	person.name = "Rukia";
 	assert( person.dance(), person.name + " is dancing." );
 
 	var ninja = new Ninja();
 	assert( ninja.swingSword(), "The sword is swinging." );
+	ninja.name = "Ichigo Kurosaki";
 	assert( !ninja.dance(), ninja.name + " is not dancing." );
 
 	assert( person instanceof Person, "Person is a Person." );
 	assert( ninja instanceof Ninja && ninja instanceof Person, "Ninja is a Ninja and a Person." );
 
-*__Run index.html to see the result.__*
 
 ## Copyright and license
 
